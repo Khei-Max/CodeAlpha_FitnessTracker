@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fitness Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Fitness Tracker</h1>
+
+  <div class="container">
+
+    <section class="card">
+      <h2>Today's Progress</h2>
+
+      <div class="progress-item">
+        <div class="progress-label">
+          <span>Steps</span>
+          <span id="steps-text">0 / 10000</span>
+        </div>
+        <div class="progress-bar"><div id="steps-fill" class="progress-fill"></div></div>
+      </div>
+
+      <div class="progress-item">
+        <div class="progress-label">
+          <span>Workout Minutes</span>
+          <span id="minutes-text">0 / 30</span>
+        </div>
+        <div class="progress-bar"><div id="minutes-fill" class="progress-fill"></div></div>
+      </div>
+
+      <div class="progress-item">
+        <div class="progress-label">
+          <span>Calories Burned</span>
+          <span id="calories-text">0 / 500</span>
+        </div>
+        <div class="progress-bar"><div id="calories-fill" class="progress-fill"></div></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Log Activity</h2>
+
+      <label for="date-input">Date</label>
+      <input type="date" id="date-input">
+
+      <label for="type-input">Exercise Type</label>
+      <select id="type-input">
+        <option>Walking</option>
+        <option>Running</option>
+        <option>Cycling</option>
+        <option>Gym Workout</option>
+        <option>Yoga</option>
+        <option>Swimming</option>
+        <option>Other</option>
+      </select>
+
+      <label for="duration-input">Duration (minutes)</label>
+      <input type="number" id="duration-input" min="0" placeholder="e.g. 30">
+
+      <label for="calories-input">Calories Burned</label>
+      <input type="number" id="calories-input" min="0" placeholder="e.g. 200">
+
+      <label for="steps-input">Steps (optional)</label>
+      <input type="number" id="steps-input" min="0" placeholder="e.g. 4000">
+
+      <button id="add-btn">Add Activity</button>
+    </section>
+
+    <section class="card">
+      <h2>Last 7 Days (Calories Burned)</h2>
+      <div id="chart"></div>
+      <p id="week-summary"></p>
+    </section>
+
+    <section class="card">
+      <h2>Activity History</h2>
+      <ul id="history"></ul>
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
